@@ -15,10 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
- Route::get("/",[scrap::class,'first']);
- Route::get("/{id}",[scrap::class,'withparam']);
- Route::get("/{id}/{idd}",[scrap::class,'withparam']);
- Route::get("/{id}/{idd}/{idd3}",[scrap::class,'withparam']);
- Route::get("/{id}/{idd}/{idd3}/{idd4}",[scrap::class,'withparam']);
-
-
+Route::get("/", [scrap::class, 'first']);
+Route::get("/{id}", [scrap::class, 'withparam']);
+Route::get("/{id}/{idd}", [scrap::class, 'withparam']);
+Route::get("/{id}/{idd}/{idd3}", [scrap::class, 'withparam']);
+Route::get("/{id}/{idd}/{idd3}/{idd4}", [scrap::class, 'withparam']);
