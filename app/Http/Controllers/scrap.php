@@ -176,7 +176,7 @@ class scrap extends Controller
                 $this->all_data["heading_title"] = $heading_title;
                 $this->all_data['spin_text'] = $spin_txt;
                 $this->all_data['title'] = $title;
-                $client = new Client(HttpClient::create(['timeout' => 60]));
+                $client = new Client(HttpClient::create(['timeout' => 120]));
                 $data = $client->request("GET", "https://www.numerosdetelefono.es/" . $id);
                 // For Prefijo-Index number and name
                 $data->filter(".prefijo-intermedio")->each(function ($d) {
@@ -198,7 +198,7 @@ class scrap extends Controller
             }
         }
         //This code appear home page data
-        $client = new Client(HttpClient::create(['timeout' => 60]));
+        $client = new Client(HttpClient::create(['timeout' => 120]));
         $data = $client->request("GET", "https://www.numerosdetelefono.es/");
         // For Prefijo-Movil number and name
         $data->filter(".prefijo-movil")->each(function ($d) {
@@ -293,9 +293,9 @@ class scrap extends Controller
             
             <p>Si {deseas|quieres} {ubicar|encontrar|localizar} una llamada de un número con este {código de área|prefijo}, que {encontraste|hallaste|viste} registrado en tu {agenda|registro} de llamadas, es muy {fácil|simple|sencillo}, {solamente|únicamente|solo} debes {acceder|ingresar|entrar} el prefijo $id$idd y la {culminación|terminación} del número {entero|completo}, al {rastreador|buscador} en nuestro {portal|web}, y en un {clic|clikeo} te {encontraremos|ubicaremos} el número por {localidad|área|territorio|provincia}. </p>
             
-            <h3>Que es un bloque de numeración? </h3>
-            
-            <p{En España|En territorio español} un bloque de numeración, es {una secuencia|un bloque} de números de teléfono, que está {designado|asignados} y {repartido|distribuidos|asignado|designado} por  {una compañía especifica|un operador  específico}, un bloque de numeración puede cubrir desde 1.000, hasta 10.000 números, estos tienen un {código de área|prefijo fijo}, y se pueden {repartir|organizar|asignar|distribuir} {por|entre} los {distintos|diferentes} {sectores|distritos} de una {localidad|provincia|ciudad}. Recuerda que nuestros datos son sacados de internet y podrían no ser verídicos a día de hoy. </p>");
+            <h3>Que es un bloque de numeración?</h3>
+
+            <p>{En España|En territorio español} un bloque de numeración, es {una secuencia|un bloque} de números de teléfono, que está {designado|asignados} y {repartido|distribuidos|asignado|designado} por  {una compañía especifica|un operador  específico}, un bloque de numeración puede cubrir desde 1.000, hasta 10.000 números, estos tienen un {código de área|prefijo fijo}, y se pueden {repartir|organizar|asignar|distribuir} {por|entre} los {distintos|diferentes} {sectores|distritos} de una {localidad|provincia|ciudad}. Recuerda que nuestros datos son sacados de internet y podrían no ser verídicos a día de hoy. </p>");
         }
         if ($idd3 != '') {
             $title = $this->randomizeString("🥇 De donde es el sub-bloque{| telefónico} $id$idd$idd3 ✔️ 【en España】");
@@ -355,7 +355,7 @@ class scrap extends Controller
         $this->all_data["heading_title"] = $heading_title;
         $this->all_data['spin_text'] = $spin_txt;
         $this->all_data['title'] = $title;
-        $client = new Client(HttpClient::create(['timeout' => 60]));
+        $client = new Client(HttpClient::create(['timeout' => 120]));
         $data = $client->request("GET", "https://www.numerosdetelefono.es/" . $id . $idd . $idd3 . $idd4);
         // For Prefijo-Index number and name
         $data->filter(".prefijo-intermedio")->each(function ($d) {

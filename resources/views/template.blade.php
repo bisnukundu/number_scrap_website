@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index,follow" />
+    <meta name="description"
+        content="Airlines Abrera, Disfruta de los mejores profesionales. Airlines Abrera y disfruta del mejor precio! ✅ Entra y descubre la mejor empresa, encuentra ya tu Airlines" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
@@ -24,6 +27,7 @@
                             <input name="search" class="form-control me-2" type="search" placeholder="Search"
                                 aria-label="Search">
                             <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+
                         </form>
                     </div>
                 </nav>
