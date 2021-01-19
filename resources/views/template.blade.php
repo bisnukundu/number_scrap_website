@@ -23,8 +23,9 @@
                     <div class="container-fluid  justify-content-center justify-content-md-between">
                         <a href="/" class="navbar-brand"><img width="100px" src="{{ asset('img/telefonos.png') }}"
                                 alt="logo" class="img-fluid"></a>
-                        <form method="GET" action="/" class="d-flex">
-                            <input name="search" class="form-control me-2" type="search" placeholder="Search"
+                        <form method="POST" action="/" class="d-flex">
+                            @csrf
+                            <input required name="search" class="form-control me-2" type="search" placeholder="Search"
                                 aria-label="Search">
                             <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
 
